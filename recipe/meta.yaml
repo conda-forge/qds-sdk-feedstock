@@ -1,8 +1,8 @@
 {%set name = "qds-sdk" %}
 {%set snakename = "qds_sdk" %}
-{%set version = "1.9.4" %}
+{%set version = "1.9.7" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "65027d56eb8923fd732bb00292477016c2f0b33a600c6957c2a31b3e0e886ee1" %}
+{%set hash_val = "655272df5b932b23d86abf1adad2112878fdd74e81aa53be242939a24db760e1" %}
 
 package:
   name: {{ name }}
@@ -14,7 +14,7 @@ source:
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
