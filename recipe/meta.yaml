@@ -1,9 +1,9 @@
 {% set name = "qds-sdk" %}
 {% set snakename = "qds_sdk" %}
-{% set version = "1.13.0" %}
+{% set version = "1.14.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "2a59836b4419094096cd46dc307c8554147eeaa837a59766ca9777b5a2adde29" %}
+{% set hash = "0427bd7075baa03f39d75c1ce8e18031f156fcae782f2a1860f93586deea561b" %}
 {% set build = 0 %}
 
 package:
@@ -18,7 +18,7 @@ source:
 build:
   noarch: python
   number: {{ build }}
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
