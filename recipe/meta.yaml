@@ -1,6 +1,6 @@
 {% set name = "qds-sdk" %}
 {% set snakename = "qds_sdk" %}
-{% set version = "1.15.0" %}
+{% set version = "1.16.1" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ snakename }}-{{ version }}.tar.gz
-  sha256: 25a305fb404b232ba90a5260cef9dc264f701d51a58b9046c20d1f3834040ea3
+  sha256: 28850682afcf3ab0f2a74a9fd442715519db3ee2ba91c7ecb0b1a56773748ffd
 
 build:
   noarch: python
@@ -34,7 +34,7 @@ test:
     - qds_sdk
   commands:
     - pip check
-  requires: 
+  requires:
     - pip
 
 about:
@@ -42,7 +42,7 @@ about:
   license_file: {{ RECIPE_DIR }}/LICENSE
   license: Apache-2.0
   license_family: Apache
-  summary: 'Python SDK for coding to the Qubole Data Service API'
+  summary: Python SDK for coding to the Qubole Data Service API
 
 extra:
   recipe-maintainers:
