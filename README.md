@@ -3,7 +3,7 @@ About qds-sdk
 
 Home: https://github.com/qubole/qds-sdk-py
 
-Package license: Apache 2.0
+Package license: Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qds-sdk-feedstock/blob/master/LICENSE.txt)
 
