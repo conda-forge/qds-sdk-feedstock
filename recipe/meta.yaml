@@ -1,9 +1,9 @@
 {% set name = "qds-sdk" %}
 {% set snakename = "qds_sdk" %}
-{% set version = "1.13.0" %}
+{% set version = "1.15.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "2a59836b4419094096cd46dc307c8554147eeaa837a59766ca9777b5a2adde29" %}
+{% set hash = "25a305fb404b232ba90a5260cef9dc264f701d51a58b9046c20d1f3834040ea3" %}
 {% set build = 1 %}
 
 package:
