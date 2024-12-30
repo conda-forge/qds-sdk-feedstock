@@ -7,22 +7,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ snakename }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ snakename }}-{{ version }}.tar.gz
   sha256: 28850682afcf3ab0f2a74a9fd442715519db3ee2ba91c7ecb0b1a56773748ffd
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
 
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - requests >=1.0.3
     - boto >=2.1.1
     - six >=1.2.0
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/qubole/qds-sdk-py
