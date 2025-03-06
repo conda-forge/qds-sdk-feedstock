@@ -1,6 +1,6 @@
 {% set name = "qds-sdk" %}
 {% set snakename = "qds_sdk" %}
-{% set version = "1.16.1" %}
+{% set version = "1.17.0" %}
 
 package:
   name: {{ name }}
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ snakename }}-{{ version }}.tar.gz
-  sha256: 28850682afcf3ab0f2a74a9fd442715519db3ee2ba91c7ecb0b1a56773748ffd
+  sha256: 1de5d17995c6e0ea6ca91378aa953694248018268d300cbdb5cd4673ea101477
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
