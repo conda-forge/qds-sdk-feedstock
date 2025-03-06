@@ -25,6 +25,7 @@ requirements:
     - python >={{ python_min }}
     - requests >=1.0.3
     - boto >=2.1.1
+    - boto3
     - six >=1.2.0
     - urllib3 >=1.0.2
     - inflection >=0.3.1
