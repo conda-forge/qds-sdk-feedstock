@@ -1,0 +1,50 @@
+schema_version: 1
+
+context:
+  name: qds-sdk
+  snakename: qds_sdk
+  version: "1.17.0"
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ snakename }}-${{ version }}.tar.gz
+  sha256: 1de5d17995c6e0ea6ca91378aa953694248018268d300cbdb5cd4673ea101477
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - requests >=1.0.3
+    - boto >=2.1.1
+    - boto3
+    - six >=1.2.0
+    - urllib3 >=1.0.2
+    - inflection >=0.3.1
+
+tests:
+  - python:
+      imports:
+        - qds_sdk
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  license_file: LICENSE
+  license: Apache-2.0
+  summary: Python SDK for coding to the Qubole Data Service API
+  homepage: https://github.com/qubole/qds-sdk-py
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
